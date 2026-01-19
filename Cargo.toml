@@ -1,0 +1,17 @@
+[package]
+name = "siesta-nginx-sentinel"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.11.8"
+regex = "1.9"
+dashmap = "6.1.0"
+linemux = "0.3"
+libc = "0.2.180"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_yaml = "0.9.34"
+notify = "8.2.0"

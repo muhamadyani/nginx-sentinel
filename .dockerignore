@@ -1,0 +1,13 @@
+# Abaikan folder build artifacts
+target/
+**/*.rs.bk
+
+# Abaikan file git
+.git/
+.gitignore
+
+# Abaikan log lokal (jika ada)
+*.log
+
+# Abaikan file sistem Mac
+.DS_Store

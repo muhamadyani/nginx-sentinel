@@ -1,0 +1,33 @@
+sensitive_files:
+  - "/.env"
+  - "/.git/config"
+cms_attacks:
+  - "/wp-admin"
+  - "/xmlrpc.php"
+# Configuration
+log_path: "/var/log/nginx/access.log"
+max_retries: 3
+window_seconds: 60
+ban_time_seconds: 86400
+# Whitelist
+whitelist:
+  - "127.0.0.1"
+  - "::1"
+# Bad User Agents
+bad_user_agents:
+  - "bot"
+  - "crawler"
+  - "spider"
+  - "scraper"
+  - "SemrushBot"
+  - "AhrefsBot"
+  - "MJ12bot"
+  - "DotBot"
+  - "YandexBot"
+  - "Crawler"
+# Instant Ban Patterns (Banned immediately without counting)
+instant_ban:
+  - "/etc/passwd"
+  - "/../.."
+  - "union"
+  - "alert"
