@@ -141,11 +141,11 @@ sudo SENTINEL_CONFIG=$(pwd)/sentinel_config.yaml ./target/release/siesta-nginx-s
 To view currently banned IPs:
 
 ```bash
-sudo ipset list siest_sentinel
+sudo ipset list nginx_sentinel
 ```
 
 To manually remove an IP from the ban list:
 
 ```bash
-sudo ipset del siest_sentinel <IP_ADDRESS>
+sudo ipset del nginx_sentinel <IP_ADDRESS>
 ```
