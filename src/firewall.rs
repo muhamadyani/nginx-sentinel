@@ -8,7 +8,7 @@ pub struct IpSetFirewall {
 
 impl IpSetFirewall {
     pub fn new() -> Result<Self> {
-        let set_name = "siest_sentinel".to_string();
+        let set_name = "nginx_sentinel".to_string();
 
         // 1. Create IPSet (hash:ip type with timeout support)
         // -exist ensures no error if set already exists
@@ -66,7 +66,7 @@ impl IpSetFirewall {
     }
 
     pub fn ban_ip(&self, ip: &str, duration: usize) -> Result<()> {
-        // Command: ipset add siest_sentinel 1.2.3.4 timeout 3600 -exist
+        // Command: ipset add nginx_sentinel 1.2.3.4 timeout 3600 -exist
         let output = Command::new("ipset")
             .args(&[
                 "add",
