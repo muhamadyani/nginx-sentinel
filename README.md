@@ -1,4 +1,4 @@
-# lNginx Sentinel
+# Nginx Sentinel
 
 **Nginx Sentinel** is a lightweight and high-performance Intrusion Detection & Prevention System (IDS/IPS) built using **Rust**. The application is designed to monitor Nginx access logs in real-time, detect attack patterns, and automatically block malicious IP addresses using `ipset` and `iptables`.
 
