@@ -1,6 +1,6 @@
-# Siesta Nginx Sentinel
+# lNginx Sentinel
 
-**Siesta Nginx Sentinel** is a lightweight and high-performance Intrusion Detection & Prevention System (IDS/IPS) built using **Rust**. The application is designed to monitor Nginx access logs in real-time, detect attack patterns, and automatically block malicious IP addresses using `ipset` and `iptables`.
+**Nginx Sentinel** is a lightweight and high-performance Intrusion Detection & Prevention System (IDS/IPS) built using **Rust**. The application is designed to monitor Nginx access logs in real-time, detect attack patterns, and automatically block malicious IP addresses using `ipset` and `iptables`.
 
 ## 🚀 Features & Advantages
 
