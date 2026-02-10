@@ -394,6 +394,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "nginx-sentinel"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "dashmap",
+ "env_logger",
+ "libc",
+ "linemux",
+ "log",
+ "notify 8.2.0",
+ "regex",
+ "serde",
+ "serde_yaml",
+ "tokio",
+]
+
+[[package]]
 name = "notify"
 version = "5.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -623,23 +640,6 @@ dependencies = [
  "ryu",
  "serde",
  "unsafe-libyaml",
-]
-
-[[package]]
-name = "siesta-nginx-sentinel"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "dashmap",
- "env_logger",
- "libc",
- "linemux",
- "log",
- "notify 8.2.0",
- "regex",
- "serde",
- "serde_yaml",
- "tokio",
 ]
 
 [[package]]

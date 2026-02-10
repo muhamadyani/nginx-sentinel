@@ -1,9 +1,9 @@
-# Makefile for Siesta Nginx Sentinel
+# Makefile for Nginx Sentinel
 
-APP_NAME = siesta-nginx-sentinel
+APP_NAME = nginx-sentinel
 CARGO = cargo
 DOCKER = docker
-IMAGE_NAME = siesta-nginx-sentinel
+IMAGE_NAME = nginx-sentinel
 
 .PHONY: all build release run test clean docker-build docker-run help
 

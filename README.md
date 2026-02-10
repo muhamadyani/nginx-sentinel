@@ -86,7 +86,7 @@ When an IP makes a request containing any of these patterns, it's immediately ad
 cargo build --release
 ```
 
-Binary will be available at `target/release/siesta-nginx-sentinel`.
+Binary will be available at `target/release/nginx-sentinel`.
 
 ### 2. Configuration
 
@@ -100,7 +100,7 @@ sensitive_files:
 
 # CMS attack patterns
 cms_attacks:
-  - "/wp-admin"
+  - "/wp-"
   - "/xmlrpc.php"
 
 # Banned User Agents
@@ -108,6 +108,7 @@ bad_user_agents:
   - "curl"
   - "python"
   - "SemrushBot"
+  - "bot"
 
 # Instant Ban Patterns (immediate ban without scoring)
 instant_ban:
@@ -115,6 +116,7 @@ instant_ban:
   - "/../.."
   - "union"
   - "alert"
+  - env
 
 # System Configuration
 log_path: "/var/log/nginx/access.log"
@@ -133,7 +135,7 @@ whitelist:
 The application **must** be run with `root` access or `sudo` because it requires permission to manipulate the firewall.
 
 ```bash
-sudo SENTINEL_CONFIG=$(pwd)/sentinel_config.yaml ./target/release/siesta-nginx-sentinel
+sudo SENTINEL_CONFIG=$(pwd)/sentinel_config.yaml ./target/release/nginx-sentinel
 ```
 
 ### 4. Verify Blocking

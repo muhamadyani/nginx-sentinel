@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y ipset iptables iputils-ping && rm -rf /
 RUN mkdir -p /var/log/nginx && touch /var/log/nginx/access.log
 
 WORKDIR /app
-COPY --from=builder /usr/src/app/target/release/siesta-nginx-sentinel .
+COPY --from=builder /usr/src/app/target/release/nginx-sentinel .
 COPY --from=builder /usr/src/app/sentinel_config.yaml .
 
 # Set environment variable log
@@ -19,4 +19,4 @@ ENV RUST_LOG=info
 ENV SENTINEL_CONFIG=/app/sentinel_config.yaml
 
 # Jalankan aplikasi
-CMD ["./siesta-nginx-sentinel"]
+CMD ["./nginx-sentinel"]
